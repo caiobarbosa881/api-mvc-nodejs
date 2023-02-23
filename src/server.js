@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const User = require("./models/User");
 const db = require("./database/db");
 
 const routes = require("./routes/routes")
