@@ -19,7 +19,7 @@ Ela é a camada que representa o modelo de dados do aplicativo, definindo as est
 
 No exemplo abaixo vou modelar a entidade User, definindo como ela vai ser dentro da minha aplicação.
 
-```
+```javascript
 const User = db.define("User", {
     userId: {
         type: DataTypes.INTEGER,
@@ -39,6 +39,47 @@ const User = db.define("User", {
         allowNull: false
     }
 })
+
+```
+
+Podemos notar que ditamos como ela vai ser em nossa aplicação.
+
+## Controller
+
+O controller é responsável por receber as solicitações do usuário, decidir o que fazer com elas e, em seguida, chama o modelo apropriado para realizar a tarefa necessária. Depois que o modelo processa a solicitação, o controller é responsável por coletar os resultados.
+
+Resumindo: O controller é o componente que controla o fluxo da aplicação.
+
+Esse Controller abaixo vai ser o addUserController, responsável por adicionar novos Users.
+
+Vou utilizar o Model User citado anteriomente e receber a soliticação de adicionar um novo usuário, importando ele para o controller.
+
+
+```javascript
+const User = require("../models/User");
+
+const addUser = async (req, res) => {
+    const { name, email, age } = req.body;
+
+    const userExist = await User.findOne({
+        where: {
+            email
+        }
+    });
+
+    if (!userExist) {        
+        if (name && email && age !== null) {
+            const userCreated = await User.create({ name, email, age });
+            return res.send("Usuário criado com sucesso!!!");
+        }
+    }
+
+    return res.redirect("/?error=emailTaken");
+};
+
+module.exports = {
+    addUser
+}
 
 ```
 
