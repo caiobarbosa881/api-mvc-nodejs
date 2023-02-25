@@ -12,6 +12,8 @@ Execute os comandos abaixo em sequência.
 A aplicação foi criada seguindo a arquitetura MVC (Model-View-Controller).<br>
 O objetivo principal do padrão MVC é separar as preocupações em camadas distintas, o que torna o código mais organizado e fácil de manter.
 
+<img src="https://arquivo.devmedia.com.br/artigos/Joel_Rodrigues/Guias/guia-aspnet-mvc-1.png" alt="Imagem representando arquitetura MVC">
+
 ## Model
 
 A Model em uma arquitetura MVC (Model-View-Controller) é responsável por lidar com a lógica de negócios e gerenciamento de dados do aplicativo.
@@ -83,6 +85,28 @@ module.exports = {
     addUser
 }
 
+```
+
+## View
+
+Ela exibe os dados que foram processados e organizados pelo Controller, para que o usuário possa interagir com a aplicação final.
+
+Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo ocorra de forma errada nas rotas.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+</head>
+<body>
+    <img alt="erro 404" src="https://neilpatel.com/wp-content/uploads/2019/05/ilustracao-sobre-o-error-404-not-found.jpeg">
+</body>
+</html>
 ```
 
 ## Aviso
