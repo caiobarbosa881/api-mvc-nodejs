@@ -20,3 +20,6 @@ const port = 3000 || 3333;
 app.listen(port, () => {
     console.log("Server running on port: " + port);
 });
+
+
+module.exports = app;
