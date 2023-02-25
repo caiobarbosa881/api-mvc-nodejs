@@ -20,6 +20,9 @@ Ela é a camada que representa o modelo de dados do aplicativo, definindo as est
 No exemplo abaixo vou modelar a entidade User, definindo como ela vai ser dentro da minha aplicação.
 
 ```javascript
+const { Sequelize, DataTypes } = require("sequelize");
+const db = require("../database/db");
+
 const User = db.define("User", {
     userId: {
         type: DataTypes.INTEGER,
@@ -40,6 +43,7 @@ const User = db.define("User", {
     }
 })
 
+module.exports = User;
 ```
 
 Podemos notar que ditamos como ela vai ser em nossa aplicação.
@@ -53,8 +57,6 @@ Resumindo: O controller é o componente que controla o fluxo da aplicação.
 Esse Controller abaixo vai ser o addUserController, responsável por adicionar novos Users.
 
 Vou utilizar o Model User citado anteriomente e receber a soliticação de adicionar um novo usuário, importando ele para o controller.
-
-
 ```javascript
 const User = require("../models/User");
 
