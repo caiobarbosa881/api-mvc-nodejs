@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Sqlite Banco de Dados / Database
-./src/database/bd.sqlite
+/src/database/bd.sqlite
