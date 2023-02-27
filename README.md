@@ -91,6 +91,10 @@ module.exports = {
 
 Ela exibe os dados que foram processados e organizados pelo Controller, para que o usuário possa interagir com a aplicação final.
 
+A View é separada do modelo e do controlador, o que permite que cada componente seja alterado independentemente sem afetar os outros. Ela recebe dados do controlador e os apresenta em uma interface gráfica de usuário (GUI) apropriada para a plataforma.
+
+View não deve conter lógica de negócios ou acesso direto aos dados do modelo, mas sim apresentar informações de forma clara e interativa para o usuário.
+
 Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo ocorra de forma errada nas rotas.
 
 ```html
