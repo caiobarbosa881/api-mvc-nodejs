@@ -11,7 +11,7 @@ const editUser = async (req, res) => {
         user.update({ name, email, age });
         return res.redirect("/");
     }).catch(() => {
-        return res.redirect("/?error=invalidUUID");
+        return res.redirect("/?error=invalidUserId");
     });
 }
 

@@ -6,7 +6,7 @@ const User = require('./src/models/User');
 
 describe('GET /', () => {
   describe('Testando a Rota', () => {
-    it('Deve Retornar o Status HTTP 200', async () => {
+    it('Responder com status 200', async () => {
       const response = await request.get('/');
       expect(response.status).toBe(200);
     });
@@ -33,7 +33,7 @@ describe('POST /adduser', () => {
   });
 
   describe('Testando a Rota', () => {
-    it('Deve Retornar o Status HTTP 200', async () => {
+    it('Responder com status 200', async () => {
       const novoUsuario = {
         name: 'Ronald',
         age: 23,
