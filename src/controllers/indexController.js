@@ -1,3 +1,5 @@
+'use strict';
+
 const User = require("../models/User");
 
 const renderPage = async (req, res) => {

@@ -1,3 +1,5 @@
+'use strict';
+
 const User = require("../models/User");
 
 const editUser = async (req, res) => {
