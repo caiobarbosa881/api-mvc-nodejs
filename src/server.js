@@ -16,7 +16,7 @@ app.use("/", routes);
 
 db.sync().then(() => { console.log("A conexão com o banco de dados foi um sucesso.")}).catch((error) => console.log(error));
 
-const port = 3000 || 3333;
+const port = 3001 || 3333;
 app.listen(port, () => {
     console.log("Server running on port: " + port);
 });
