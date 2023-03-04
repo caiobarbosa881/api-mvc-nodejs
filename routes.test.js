@@ -28,10 +28,6 @@ describe('POST /adduser', () => {
     await db.sync({ force: true });
   });
 
-  afterAll(async () => {
-    await db.close();
-  });
-
   describe('Testando a Rota', () => {
     it('Responder com status 200', async () => {
       const novoUsuario = {
@@ -64,6 +60,44 @@ describe('POST /adduser', () => {
       }
       const response = await request.post('/adduser').send(novoUsuario);
       expect(response.type).toBe('application/json');
+    });
+  });
+});
+
+describe('PUT /edituser',  () => {
+  beforeAll(async () => {
+    const novoUsuario = {
+      name: 'Felipe',
+      age: 23,
+      email: 'felipe@email.com'
+    }
+    
+    const tryFindNewUser = await User.findOne({
+      where : {
+        email: 'felipe@email.com' 
+      }
+    });
+
+    if(!tryFindNewUser){
+      await User.create(novoUsuario);
+    }
+
+  });
+  describe('Testando a Rota', () => {
+
+    it('Responder com status 200', async () => {
+      const novoUsuario = {
+        name: 'Felipe',
+        age: 23,
+        email: 'felipe@email.com'
+      }
+      const tryFindNewUser = await User.findOne({
+        where : {
+          email: 'felipe@email.com' 
+        }
+      });
+      const response = await request.put('/edituser/' + tryFindNewUser.userId).send(novoUsuario);
+      expect(response.status).toBe(200);
     });
   });
 });

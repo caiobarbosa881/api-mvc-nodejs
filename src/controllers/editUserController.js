@@ -11,7 +11,7 @@ const editUser = async (req, res) => {
         }
     }).then((user) => {
         user.update({ name, email, age });
-        return res.redirect("/");
+        return res.json({"mensagem": "Usuário editado com sucesso!!!"});
     }).catch(() => {
         return res.redirect("/?error=invalidUserId");
     });
