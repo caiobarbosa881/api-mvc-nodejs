@@ -99,5 +99,31 @@ describe('PUT /edituser',  () => {
       const response = await request.put('/edituser/' + tryFindNewUser.userId).send(novoUsuario);
       expect(response.status).toBe(200);
     });
+
+    it('Deve editar um usuário', async () => {
+      const novoUsuario = {
+        name: 'Felipe',
+        age: 30,
+        email: 'felipe@email.com'
+      }
+      const tryFindNewUser = await User.findOne({
+        where : {
+          email: 'felipe@email.com' 
+        }
+      });
+      
+      const response = await request.put('/edituser/' + tryFindNewUser.userId).send(novoUsuario);
+
+      const tryFindEditedUser = await User.findOne({
+        where: {
+          email: 'felipe@email.com',
+          age: 30
+        }
+      })
+      
+      expect(response.status).toBe(200);
+      expect(tryFindEditedUser).toBeTruthy();
+    });
+
   });
 });
