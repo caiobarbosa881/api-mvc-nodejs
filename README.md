@@ -112,6 +112,16 @@ Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo o
 </body>
 </html>
 ```
+## Dependências
+
+    Express
+    Sequelize
+    Sqlite3
+
+## Dependências de Desenvolvimento
+
+    Jest
+    Supertest
 
 ## Aviso
 
