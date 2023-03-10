@@ -14,7 +14,7 @@ const deleteUser = async (req, res) => {
         }
     });
 
-    return res.redirect("/");
+    return res.json({"mensagem": "O usuário foi removido com sucesso!!!"});
 };
 
 module.exports = { 

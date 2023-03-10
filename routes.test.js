@@ -127,3 +127,18 @@ describe('PUT /edituser',  () => {
 
   });
 });
+
+describe('DELETE /deleteuser', () => {
+  describe('Testando a Rota', () => {
+    it('Deve remover um usuário', async () => {
+      const tryFindNewUser = await User.findOne({
+        where : {
+          email: 'felipe@email.com' 
+        }
+      });
+
+      const response = await request.delete('/deleteuser/' + tryFindNewUser.userId)
+      await expect(User.findOne({ where: { name: 'Felipe' } })).resolves.toBe(null);
+    });  
+  });
+});
