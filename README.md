@@ -4,8 +4,8 @@ CRUD simples, utilizando o padrão de arquitetura MVC.
 ## Como Rodar o Projeto
 Execute os comandos abaixo em sequência.
 
--npm install
-<br>-npm run dev
+    -npm install
+    -npm run dev
 
 ## Arquitetura MVC
 
@@ -119,13 +119,7 @@ Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo o
     Sqlite3
 
 ## Dependências de Desenvolvimento
-
     Jest
     Supertest
-
-## Aviso
-
-O README está sendo implementado aos poucos e conteúdos adicionais vão ser adicionados.
-
 ## Autores
-Caio Barbosa
+[@Caio Barbosa](https://www.github.com/caiobarbosa881)
