@@ -112,6 +112,11 @@ Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo o
 </body>
 </html>
 ```
+
+## Banco de Dados
+
+Nossa aplicação está utilizando um banco de dados relacional chamado SQLITE que é muito utilizado principamente na parte de desenvolvimento. Ele é incorporado na própria aplicação, pelo fato de ser um banco de dados embutido ele também é empregado para desenvolver aplicações em dispositivos móveis.
+
 ## Dependências
 
     Express
