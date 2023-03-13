@@ -117,6 +117,30 @@ Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo o
 
 Nossa aplicação está utilizando um banco de dados relacional chamado SQLITE que é muito utilizado principamente na parte de desenvolvimento. Ele é incorporado na própria aplicação, pelo fato de ser um banco de dados embutido ele também é empregado para desenvolver aplicações em dispositivos móveis.
 
+## ORM
+
+O mapeamento objeto-relacional(ORM), é uma técnica para aproximar o paradigma de orientação a objetos ao paradigma do banco de dados relacional.
+
+Nessa aplicação estamos utilizando o ORM Sequelize.
+Podemos ver abaixo como o sequelize está trabalhando com o banco de dados relacional sqlite.
+```javascript
+'use strict';
+
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize({
+        dialect: 'sqlite',
+        storage: './src/database/db.sqlite',
+        define: {
+            timestamps: true,
+            freezeTableName: true
+          },
+    });
+
+module.exports = sequelize;
+```
+
+
 ## Dependências
 
     Express
