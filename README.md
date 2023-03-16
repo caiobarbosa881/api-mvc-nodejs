@@ -139,7 +139,9 @@ const sequelize = new Sequelize({
 
 module.exports = sequelize;
 ```
+## Banco de Dados
 
+Utilizamos um banco de dados integrado na própria aplicação sendo o SQLITE.
 
 ## Dependências
 
