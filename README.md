@@ -141,7 +141,7 @@ module.exports = sequelize;
 ```
 ## Banco de Dados
 
-Utilizamos um banco de dados integrado na própria aplicação sendo o SQLITE.
+Utilizamos um banco de dados integrado na própria aplicação sendo o SQLITE, com ele um arquivo é criado dentro da própria aplicação onde os dados serão armazenados.
 
 ## Dependências
 
