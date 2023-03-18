@@ -7,6 +7,8 @@ Execute os comandos abaixo em sequência.
     -npm install
     -npm run dev
 
+O primeiro comando npm install é responsável por instalar o projeto, já o npm run dev roda o projeto.
+
 ## Arquitetura MVC
 
 A aplicação foi criada seguindo a arquitetura MVC (Model-View-Controller).<br>
