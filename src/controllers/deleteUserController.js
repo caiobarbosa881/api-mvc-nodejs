@@ -5,7 +5,7 @@ const User = require("../models/User");
 const deleteUser = async (req, res) => {
     
     if (req.params.userId == undefined || req.params.userId == null) {
-        return res.redirect("/?error=noUserFound");
+        return res.json({ mensagem: "Nenhum usuário com esse id foi encontrado."});
     };
     
     await User.destroy({
