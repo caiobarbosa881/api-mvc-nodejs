@@ -1,5 +1,5 @@
 # crud-mvc-nodejs
-API CRUD nodejs simples, utilizando o padrão de arquitetura MVC.
+API CRUD HTTP/JSON nodejs simples, utilizando o padrão de arquitetura MVC.
 
 ## Como Rodar o Projeto
 Execute os comandos abaixo em sequência.
