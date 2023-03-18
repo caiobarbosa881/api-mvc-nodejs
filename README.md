@@ -150,12 +150,15 @@ Você pode executar testes com esse comando abaixo:
 
 a dependências jest e supertest auxiliam no teste das rotas da api criada.
 ## Dependências
+São necessárias para o projeto funcionar corretamente.
 
     Express
     Sequelize
     Sqlite3
 
 ## Dependências de Desenvolvimento
+Essas são todas as dependências que ficam apenas quando desenvolvendo e não vão para a versão final do aplicativo pelo fato de não forem necessárias na versão final.
+
     Jest
     Supertest
 ## Autores
