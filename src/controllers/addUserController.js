@@ -18,7 +18,7 @@ const addUser = async (req, res) => {
         }
     }
 
-    return res.redirect("/?error=emailTaken");
+    return res.json({ mensagem: "O email inserido já é utilizado."});
 };
 
 module.exports = {
