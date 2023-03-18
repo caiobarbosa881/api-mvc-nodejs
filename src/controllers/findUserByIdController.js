@@ -8,7 +8,7 @@ const renderUserById = async (req, res) => {
     if(user){
         res.json(user);
     }
-    res.render("404");   
+    return res.json({ mensagem: "Nenhum Usuário foi encontrado"});
 }
 
 
