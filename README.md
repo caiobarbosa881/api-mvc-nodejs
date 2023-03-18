@@ -1,5 +1,5 @@
 # crud-mvc-nodejs
-CRUD simples, utilizando o padrão de arquitetura MVC.
+API CRUD nodejs simples, utilizando o padrão de arquitetura MVC.
 
 ## Como Rodar o Projeto
 Execute os comandos abaixo em sequência.
@@ -74,7 +74,7 @@ const addUser = async (req, res) => {
     if (!userExist) {        
         if (name && email && age !== null) {
             const userCreated = await User.create({ name, email, age });
-            return res.send("Usuário criado com sucesso!!!");
+            return res.json({ mensagem: "Usuário criado com sucesso!!!" });
         }
     }
 
@@ -143,6 +143,12 @@ module.exports = sequelize;
 
 Utilizamos um banco de dados integrado na própria aplicação sendo o SQLITE, com ele um arquivo é criado dentro da própria aplicação onde os dados serão armazenados.
 
+## Testes
+Você pode executar testes com esse comando abaixo:
+
+    npm test
+
+a dependências jest e supertest auxiliam no teste das rotas da api criada.
 ## Dependências
 
     Express
