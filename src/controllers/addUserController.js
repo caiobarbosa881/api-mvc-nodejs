@@ -14,7 +14,7 @@ const addUser = async (req, res) => {
     if (!userExist) {        
         if (name && email && age !== null) {
             const userCreated = await User.create({ name, email, age });
-            return res.json({ mensagem: "Usuário criado com sucesso!!!" });
+            return res.status(201).json({ mensagem: "Usuário criado com sucesso!!!" });
         }
     }
 
