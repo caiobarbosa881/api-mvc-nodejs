@@ -6,9 +6,9 @@ const renderUserById = async (req, res) => {
     const user = await User.findByPk(req.params.userId);
 
     if(user){
-        res.json(user);
+        res.status(200).json(user);
     }
-    return res.json({ mensagem: "Nenhum Usuário foi encontrado"});
+    return res.status(404).json({ mensagem: "Nenhum Usuário foi encontrado"});
 }
 
 
