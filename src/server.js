@@ -20,8 +20,7 @@ db.sync().then(() => { console.log("A conexão com o banco de dados foi um suces
 
 const port = 3001 || 3333;
 app.listen(port, () => {
-    console.log("Server running on port: " + port);
+    console.log("Porta rodando na: " + port);
 });
-
 
 module.exports = app;
