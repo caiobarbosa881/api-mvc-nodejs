@@ -5,7 +5,7 @@ const User = require("../models/User");
 const deleteUser = async (req, res) => {
     
     if (req.params.userId == undefined || req.params.userId == null) {
-        return res.json({ mensagem: "Nenhum usuário com esse id foi encontrado."});
+        return res.status(204).json({ mensagem: "Nenhum usuário com esse id foi encontrado."});
     };
     
     await User.destroy({
@@ -14,7 +14,7 @@ const deleteUser = async (req, res) => {
         }
     });
 
-    return res.json({ mensagem: "O usuário foi removido com sucesso!!!"});
+    return res.status(204).json({ mensagem: "O usuário foi removido com sucesso!!!"});
 };
 
 module.exports = { 
