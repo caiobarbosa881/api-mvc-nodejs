@@ -106,3 +106,7 @@ dist
 # Sqlite Banco de Dados / Database
 /src/database/db.sqlite
 /src/database/bd.sqlite
+
+# Package-lock.json
+
+package-lock.json
