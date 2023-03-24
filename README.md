@@ -92,6 +92,8 @@ module.exports = {
 
 ## View
 
+Nessa aplicação nós não utilizamos a view, porém ela poderia ser utilizada para mandar uma imagem com error 404 ao front-end.
+
 Ela exibe os dados que foram processados e organizados pelo Controller, para que o usuário possa interagir com a aplicação final.
 
 A View é separada do modelo e do controlador, o que permite que cada componente seja alterado independentemente sem afetar os outros. Ela recebe dados do controlador e os apresenta em uma interface gráfica de usuário (GUI) apropriada para a plataforma.
@@ -115,6 +117,8 @@ Nesse caso abaixo o back-end retorna uma imagem 404 para o front-end caso algo o
 </body>
 </html>
 ```
+
+Para utilizar a View seriam necessárias configurações no server.js, instalação de dependências como EJS e um controller retornar esse HTML que se encontra na View.
 
 ## Banco de Dados
 
