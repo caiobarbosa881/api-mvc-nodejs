@@ -92,7 +92,7 @@ module.exports = {
 
 ## View
 
-Nessa aplicação nós não utilizamos a view, porém ela poderia ser utilizada para mandar uma imagem com error 404 ao front-end.
+AVISO: Nessa aplicação nós não utilizamos a view, porém ela poderia ser utilizada para mandar uma imagem com error 404 ao front-end.
 
 Ela exibe os dados que foram processados e organizados pelo Controller, para que o usuário possa interagir com a aplicação final.
 
