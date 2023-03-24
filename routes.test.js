@@ -37,7 +37,7 @@ describe('POST /adduser', () => {
       }
       const response = await request.post('/adduser').send(novoUsuario);
 
-      expect(response.status).toBe(200);
+      expect(response.status).toBe(201);
     });
 
     it('Deve adicionar um novo usuário', async () => {
