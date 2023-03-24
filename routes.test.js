@@ -29,7 +29,7 @@ describe('POST /adduser', () => {
   });
 
   describe('Testando a Rota', () => {
-    it('Responder com status 200', async () => {
+    it('Responder com status 201', async () => {
       const novoUsuario = {
         name: 'Ronald',
         age: 23,
