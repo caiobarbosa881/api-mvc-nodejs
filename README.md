@@ -2,6 +2,12 @@
 
 API CRUD HTTP/JSON nodejs simples, utilizando o padrão de arquitetura MVC.
 
+Significa que nossa aplicação vai ser uma API ou Application Programming Interface (Interface de Programação de Aplicação).
+
+Ela vai utilizar o protocolo de comunicação HTTP(Hypertext TransferProtocol).
+
+A aplicação vai retornar JSON (JavaScript Object Notation) que é um formato de dados leve e fácil de ler e escrever. Ele é usado para armazenar e transmitir informações estruturadas entre aplicativos. Ele consiste em uma coleção de pares chave-valor e é frequentemente usado em aplicativos da web e móveis.
+
 ## Como Rodar o Projeto
 Execute os comandos abaixo em sequência.
 
