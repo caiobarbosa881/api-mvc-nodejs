@@ -162,6 +162,8 @@ Você pode executar testes com esse comando abaixo:
     npm test
 
 a dependências jest e supertest auxiliam no teste das rotas da api criada.
+
+os testes servem para melhor o desenvolvimento e tornar a aplicação mais consistente e previsível, adiantando cenários que podem ocorrer e no processo descobrindo coisas novas como erros não notados durante a criação do software.
 ## Dependências
 São necessárias para o projeto funcionar corretamente.
 
