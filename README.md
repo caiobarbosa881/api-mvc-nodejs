@@ -192,7 +192,7 @@ Você pode fazer o deploy( colocar a aplicação no ar ) dessa API, atualmente t
     Netlify
     Glitch
 
-AVISO: É possível sempre considerar que a documentação está listando as opções de deploy funcionando apenas no momento que foram listadas, e podem se tornar desatualizadas a qualquer momento no futuro.
+AVISO: A documentação está listando as opções de deploy funcionando apenas no momento que foram listadas, e podem se tornar desatualizadas a qualquer momento no futuro.
 
 ## Autores
 [@Caio Barbosa](https://www.github.com/caiobarbosa881)
