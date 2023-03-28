@@ -69,7 +69,6 @@ Esse Controller abaixo vai ser o addUserController, responsável por adicionar n
 
 Vou utilizar o Model User citado anteriomente e receber a soliticação de adicionar um novo usuário, importando ele para o controller.
 ```javascript
-const User = require("../models/User");
 
 const addUser = async (req, res) => {
     const { name, email, age } = req.body;
@@ -83,11 +82,11 @@ const addUser = async (req, res) => {
     if (!userExist) {        
         if (name && email && age !== null) {
             const userCreated = await User.create({ name, email, age });
-            return res.json({ mensagem: "Usuário criado com sucesso!!!" });
+            return res.status(201).json({ mensagem: "Usuário criado com sucesso!!!" });
         }
     }
 
-    return res.redirect("/?error=emailTaken");
+    return res.status(409).json({ mensagem: "O email inserido já é utilizado."});
 };
 
 module.exports = {
