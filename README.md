@@ -194,5 +194,11 @@ Você pode fazer o deploy( colocar a aplicação no ar ) dessa API, atualmente t
 
 AVISO: A documentação está listando as opções de deploy funcionando apenas no momento que foram listadas, e podem se tornar desatualizadas a qualquer momento no futuro.
 
+## .gitignore
+
+Ele é um arquivo responsável por listar o que deve ser ignorado e não ir para o repositório online ao dar um commit, um exemplo é a pasta node_modules que ao utilizar o comando npm install já seria possível ter ela no projeto sem precisar colocar no repositório online.
+
+Você pode também colocar arquivos que possam conter dados da sua máquina como variáveis de ambiente.
+
 ## Autores
 [@Caio Barbosa](https://www.github.com/caiobarbosa881)
