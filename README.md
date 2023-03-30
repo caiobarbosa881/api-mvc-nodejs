@@ -57,7 +57,7 @@ const User = db.define("User", {
 module.exports = User;
 ```
 
-Podemos notar que ditamos como ela vai ser em nossa aplicação.
+Podemos notar que ditamos como ela vai ser em nossa aplicação, Isso significa que no banco de dados vai ter uma tabela com os atributos exatamente específicados acima(userId, name, email, age).
 
 ## Controller
 
